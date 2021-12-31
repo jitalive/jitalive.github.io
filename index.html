@@ -4,20 +4,28 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1NDT1HKZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1R1NDT1HKZ');
+    </script>
   </head>
   <body>
     <section>
       <div id="twitch-embed"></div>
-      <hr />
-      <a class="twitter-timeline" data-lang="en" data-theme="dark" data-width="1200" data-height="344" href="https://twitter.com/samuelsoderberg/lists/1476612454008377346?ref_src=twsrc%5Etfw"></a>
       <pre>The stream will be offline every day from 11:00 UTC -> When I get the stream up again.</pre>
+      <hr />
+      <a class="twitter-timeline" data-lang="en" data-theme="dark" data-width="1200" data-height="344" href=""></a>
     </section>
 
     <script type="text/javascript">
       new Twitch.Embed("twitch-embed", {
         width: 1200,
         height: 620,
-        channel: "palenation"
+        channel: "kronostellus"
       });
     </script>
   </body>
