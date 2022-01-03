@@ -1,14 +1,7 @@
 body {
   background-color: black;
-} 
-
-section {
   text-align: center;
-}
-
-hr {
-  width: 1196;
-}
+} 
 
 pre {
   text-align: center;
@@ -18,14 +11,37 @@ pre {
   font-weight: bold;
 }
 
-img {
-  display: block;
+table {
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  /* border-collapse: collapse;
+  border-style: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+  width: 100%; */
 }
+
+table td {
+  /* padding: 0.625rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-right: dotted 0.0625rem gray;
+  border-left: dotted 0.0625rem gray; */
+  color: lightcoral;
+  height: 49;
+}
+
+/* table td:first-child {
+  text-align: right !important;
+} */
 
 a {
   color: hotpink;
   text-decoration: underline;
+}
+
+hr {
+  width: 1196;
 }
