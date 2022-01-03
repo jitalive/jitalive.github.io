@@ -2,6 +2,7 @@
   <head>
     <title>Jita 24/7 @ EVE Online | jitalive.org</title>
     <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="script.js"></script>
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1R1NDT1HKZ"></script>
@@ -12,12 +13,26 @@
       gtag('config', 'G-1R1NDT1HKZ');
     </script>
   </head>
-  <body>
+  <body onload="getData()">
     <section>
       <div id="twitch-embed"></div>
-      <pre>The stream will be offline every day from 11:00 UTC -> When I get the stream up again.</pre>
+      <pre style="font-size: small">(The stream will be offline every day from 11:00 UTC -> When I get the stream up again)</pre>
       <hr />
-      <a class="twitter-timeline" data-lang="en" data-theme="dark" data-width="1200" data-height="344" href=""></a>
+      <!-- <pre>Check out the latest ganks @ <a href="https://zkillboard.com" target="_blank" rel="noopener noreferrer">zKillboard</a></pre> -->
+      <pre>...</pre>
+      <pre style="font-size: small">(Heartfelt thanks to <span style="font-size: small"><a href="https://zkillboard.com" target="_blank" rel="noopener noreferrer">Squizz Caphinator</a></span> @ <a href="https://zkillboard.com/kills/highsec/" target="_blank" rel="noopener noreferrer">zKillboard</a> for providing this service!)</pre>
+      <hr />
+      <pre>Don't forget to join:</pre>
+      <a href="https://www.youtube.com/watch?v=f1TFYzYects&t=10s" target="_blank" rel="noopener noreferrer"><pre>The Kamikaze Gank Separatist Alliance!</pre></a>
+      <img src="tornado.webp" style="text-align: center"/>
+      <hr />
+      <pre style="text-decoration: none"><a href="https://everef.net/type/20189" target="_blank" rel="noopener noreferrer">The Fenrir</a> can currently be had for as little as: <a href="https://www.eveworkbench.com/market/sell/20189" target="_blank" rel="noopener noreferrer"><span id="fenrirPrice" style="color: green">...</span></a> billion ISK (<a href="https://evemaps.dotlan.net/map/The_Forge" target="_blank" rel="noopener noreferrer">The Forge</a>)</pre>
+      <hr />
+      <pre>...</pre>
+      <hr />
+      <a class="twitter-timeline" data-lang="en" data-theme="dark" data-width="1200" data-height="620" href="https://twitter.com/kronostellus?ref_src=twsrc%5Etfw"></a>
+      <hr />
+      <pre style="font-size: small">(Music from: <a href="https://www.youtube.com/c/LofiGirl/featured" target="_blank" rel="noopener noreferrer">Lofi Girl</a>)</pre>
     </section>
 
     <script type="text/javascript">
