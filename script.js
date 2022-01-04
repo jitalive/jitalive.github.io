@@ -22,7 +22,7 @@ const kills = () => {
                         ].insertCell();
 
                         if (totalValue == 10000) {
-                            cell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Pwned without implants!' /></a>";
+                            cell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Pwned! (But without implants)' /></a>";
                         } else {
                             cell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer' title='Fantastic kill!'>" + totalValue + " ISK</a>";
                         }
