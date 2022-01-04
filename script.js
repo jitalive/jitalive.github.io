@@ -39,7 +39,7 @@ const jitaKills = () => {
                         ].insertCell();
             
                         if(totalValue == 10000) {
-                            sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Podded without implants!' /></a>";
+                            sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Pwned without implants!' /></a>";
                         } else {
                             sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer' title='Fantastic kill!'>" + post.zkb.totalValue + " ISK</a>";
                         }
