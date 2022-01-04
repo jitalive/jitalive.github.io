@@ -1,6 +1,7 @@
 body {
+  max-width: 960;
+  margin: auto;
   background-color: black;
-  text-align: center;
 } 
 
 pre {
@@ -14,28 +15,13 @@ pre {
 table {
   margin-left: auto;
   margin-right: auto;
-  /* border-collapse: collapse;
-  border-style: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  table-layout: fixed;
-  width: 100%; */
 }
 
-table td {
-  /* padding: 0.625rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-right: dotted 0.0625rem gray;
-  border-left: dotted 0.0625rem gray; */
+td {
+  text-align: right;
   color: lightcoral;
   height: 49;
 }
-
-/* table td:first-child {
-  text-align: right !important;
-} */
 
 a {
   color: hotpink;
@@ -43,5 +29,5 @@ a {
 }
 
 hr {
-  width: 1196;
+  width: 956;
 }

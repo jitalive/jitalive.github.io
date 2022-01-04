@@ -1,47 +1,47 @@
 const getData = () => {
-    fenrirPrice();
-    jitaKills();
+    price();
+    kills();
 };
 
-const fenrirPrice = () => {
+const price = () => {
     fetch("https://api.evemarketer.com/ec/marketstat/json?typeid=20189&regionlimit=10000002")
         .then(response => response.json())
-        .then(marketStat => {
-            if(marketStat && marketStat[0] && marketStat[0].sell && marketStat[0].sell.min) {
-                let priceElement = document.getElementById("price");
-                
-                let fenrirMinPrice = marketStat[0].sell.min.toString();
+        .then(fenrir => {
+            if (fenrir && fenrir[0] && fenrir[0].sell && fenrir[0].sell.min) {
+                let element = document.getElementById("price");
 
-                if (priceElement && fenrirMinPrice.length > 3) {
-                    priceElement.innerHTML = fenrirMinPrice[0] + "." + fenrirMinPrice.substring(1, 4);
+                let price = fenrir[0].sell.min.toString();
+
+                if (element && price.length > 3) {
+                    element.innerHTML = price[0] + "." + price.substring(1, 4);
                 }
             }
         })
         .catch(error => console.error("Error:", error));
 };
 
-const jitaKills = () => {
+const kills = () => {
     fetch("https://zkillboard.com/api/kills/solarSystemID/30000142/pastSeconds/3600/")
         .then(response => response.json())
-        .then(zKills => {
-            if(zKills) {
-                let killsElement = document.getElementById("kills");
-                killsElement.innerHTML = "";
+        .then(kills => {
+            if (kills) {
+                let element = document.getElementById("kills");
+                element.innerHTML = "";
 
-                zKills.forEach(post => {
-                    if(post && post.killmail_id && post.zkb && post.zkb.totalValue){
+                kills.forEach(post => {
+                    if (post && post.killmail_id && post.zkb && post.zkb.totalValue) {
                         let totalValue = post.zkb.totalValue;
 
-                        killsElement.insertRow();
+                        element.insertRow();
 
-                        let sacrificeCell = killsElement.rows[
-                            killsElement.rows.length - 1
+                        let cell = element.rows[
+                            element.rows.length - 1
                         ].insertCell();
-            
-                        if(totalValue == 10000) {
-                            sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Pwned without implants!' /></a>";
+
+                        if (totalValue == 10000) {
+                            cell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Pwned without implants!' /></a>";
                         } else {
-                            sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer' title='Fantastic kill!'>" + post.zkb.totalValue + " ISK</a>";
+                            cell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer' title='Fantastic kill!'>" + totalValue + " ISK</a>";
                         }
                     }
                 });
