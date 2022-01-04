@@ -4,6 +4,7 @@ const getData = () => {
 };
 
 const fenrirPrice = () => {
+    console.log("FENRIR")
     fetch("https://api.evemarketer.com/ec/marketstat/json?typeid=20189&regionlimit=10000002")
         .then(response => response.json())
         .then(marketStat => {
@@ -12,7 +13,7 @@ const fenrirPrice = () => {
                 
                 let fenrirMinPrice = marketStat[0].sell.min.toString()
 
-                if (priceElement) {
+                if (priceElement && fenrirMinPrice.length > 3) {
                     priceElement.innerHTML = fenrirMinPrice[0] + "." + fenrirMinPrice.substring(1, 4)
                 }
             }
