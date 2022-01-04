@@ -34,12 +34,6 @@ const jitaKills = () => {
 
                         killsElement.insertRow();
 
-                        // let killCell = killsElement.rows[
-                        //     killsElement.rows.length - 1
-                        // ].insertCell();
-            
-                        // killCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'>Fantastic kill!</a>"
-
                         let sacrificeCell = killsElement.rows[
                             killsElement.rows.length - 1
                         ].insertCell();
@@ -48,7 +42,6 @@ const jitaKills = () => {
                             sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer'><img src='capsule.webp' title='Podded without implants!' /></a>";
                         } else {
                             sacrificeCell.innerHTML = "<a href='https://zkillboard.com/kill/" + post.killmail_id + "/' target='_blank' rel='noopener noreferrer' title='Fantastic kill!'>" + post.zkb.totalValue + " ISK</a>";
-                            // sacrificeCell.textContent = post.zkb.totalValue + " ISK";
                         }
                     }
                 });
