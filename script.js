@@ -4,7 +4,6 @@ const getData = () => {
 };
 
 const fenrirPrice = () => {
-    console.log("FENRIR")
     fetch("https://api.evemarketer.com/ec/marketstat/json?typeid=20189&regionlimit=10000002")
         .then(response => response.json())
         .then(marketStat => {
