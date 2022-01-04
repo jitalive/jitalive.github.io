@@ -15,7 +15,7 @@
   </head>
 
   <body onload="getData()">
-    <div id="twitch-embed"></div>
+    <div id="twitch"></div>
     <pre style="font-size: small">(The stream will be offline every day from 11:00 UTC -> When I get the stream up again)</pre>
     <hr />
     <pre>The latest ganks @ <a href="https://zkillboard.com/kills/highsec/" target="_blank" rel="noopener noreferrer">Jita</a> <img src="refresh.png" title="Refresh" onclick="kills()"></pre>
@@ -30,7 +30,7 @@
     <hr />
     <a class="twitter-timeline" data-lang="en" data-theme="dark" data-width="960" data-height="620" href="https://twitter.com/kronostellus?ref_src=twsrc%5Etfw"></a>
     <hr />
-    <pre><a href="https://evenews24.com/" target="_blank" rel="noopener noreferrer">EVE News24</a>, <a href="https://wiki.eveuniversity.org/index.php?title=Special:Categories&offset=&limit=500" target="_blank" rel="noopener noreferrer">EVE University</a>, <a href="https://imperium.news/" target="_blank" rel="noopener noreferrer">Imperium News Network</a></pre>
+    <pre><a href="https://imperium.news/" target="_blank" rel="noopener noreferrer">Imperium News Network</a>, <a href="https://evenews24.com/" target="_blank" rel="noopener noreferrer">EVE News24</a>, <a href="https://wiki.eveuniversity.org/index.php?title=Special:Categories&offset=&limit=500" target="_blank" rel="noopener noreferrer">EVE University</a></pre>
     <pre><a href="https://www.eveonline.com/news" target="_blank" rel="noopener noreferrer">EVE Online News</a>, <a href="https://forums.eveonline.com/latest" target="_blank" rel="noopener noreferrer">Forums</a>, <a href="https://www.youtube.com/c/ccpgames/videos" target="_blank" rel="noopener noreferrer">CCP Games</a></pre>
     <hr />
     <iframe width="960" height="620" src="https://www.youtube-nocookie.com/embed/LNUu75fH8Uc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -38,7 +38,7 @@
     <pre style="font-size: small">(Music from: <a href="https://www.youtube.com/c/LofiGirl/featured" target="_blank" rel="noopener noreferrer">Lofi Girl</a>)</pre>
 
     <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
+      new Twitch.Embed("twitch", {
         width: 960,
         height: 620,
         channel: "kronostellus"

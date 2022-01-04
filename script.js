@@ -1,23 +1,6 @@
 const getData = () => {
-    price();
     kills();
-};
-
-const price = () => {
-    fetch("https://api.evemarketer.com/ec/marketstat/json?typeid=20189&regionlimit=10000002")
-        .then(response => response.json())
-        .then(fenrir => {
-            if (fenrir && fenrir[0] && fenrir[0].sell && fenrir[0].sell.min) {
-                let element = document.getElementById("price");
-
-                let price = fenrir[0].sell.min.toString();
-
-                if (element && price.length > 3) {
-                    element.innerHTML = price[0] + "." + price.substring(1, 4);
-                }
-            }
-        })
-        .catch(error => console.error("Error:", error));
+    price();
 };
 
 const kills = () => {
@@ -45,6 +28,23 @@ const kills = () => {
                         }
                     }
                 });
+            }
+        })
+        .catch(error => console.error("Error:", error));
+};
+
+const price = () => {
+    fetch("https://api.evemarketer.com/ec/marketstat/json?typeid=20189&regionlimit=10000002")
+        .then(response => response.json())
+        .then(fenrir => {
+            if (fenrir && fenrir[0] && fenrir[0].sell && fenrir[0].sell.min) {
+                let element = document.getElementById("price");
+
+                let price = fenrir[0].sell.min.toString();
+
+                if (element && price.length > 3) {
+                    element.innerHTML = price[0] + "." + price.substring(1, 4);
+                }
             }
         })
         .catch(error => console.error("Error:", error));
