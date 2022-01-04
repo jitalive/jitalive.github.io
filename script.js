@@ -1,6 +1,6 @@
 const getData = () => {
-    fenrirPrice()
-    jitaKills()
+    fenrirPrice();
+    jitaKills();
 };
 
 const fenrirPrice = () => {
@@ -11,10 +11,10 @@ const fenrirPrice = () => {
             if(marketStat && marketStat[0] && marketStat[0].sell && marketStat[0].sell.min) {
                 let priceElement = document.getElementById("price");
                 
-                let fenrirMinPrice = marketStat[0].sell.min.toString()
+                let fenrirMinPrice = marketStat[0].sell.min.toString();
 
                 if (priceElement && fenrirMinPrice.length > 3) {
-                    priceElement.innerHTML = fenrirMinPrice[0] + "." + fenrirMinPrice.substring(1, 4)
+                    priceElement.innerHTML = fenrirMinPrice[0] + "." + fenrirMinPrice.substring(1, 4);
                 }
             }
         })
