@@ -43,7 +43,7 @@ const price = () => {
                 let price = fenrir[0].sell.min.toString();
 
                 if (element && price.length > 3) {
-                    element.innerHTML = price[0] + "." + price.substring(1, 4);
+                    element.textContent = price[0] + "." + price.substring(1, 4);
                 }
             }
         })
