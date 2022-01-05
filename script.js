@@ -49,3 +49,12 @@ const price = () => {
         })
         .catch(error => console.error("Error:", error));
 };
+
+const toggle = () => {
+    let element = document.getElementById("toggle");
+
+    if (element.style.display === "none")
+        element.style.display = "block";
+    else
+        element.style.display = "none";
+}
